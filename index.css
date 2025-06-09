@@ -1,0 +1,468 @@
+                                                                /*Aspectos generales*/
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Parkinsans", sans-serif;
+    color: #333;
+    background: linear-gradient(45deg, #D1913C, #FFD194);
+}
+
+                                                                /*CABECERA*/
+
+.cabecera{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/multimedia/cafeteria.jpg');
+    background-size: cover;
+    background-position: center 60%;
+    color: #ffffff;
+    border-radius: 0 0 5rem 5rem;
+}
+
+.cabecera .menu{
+    display: flex;
+    gap: 5rem;
+    margin: 4rem 5rem;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo h1{
+    color: #4a3b29;
+    font-size: 8rem;
+    text-shadow: 0.5rem 0.5rem #ffffff;
+}
+
+.titulo img{
+    width: 20rem;
+}
+
+.cabecera .menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: ease 0.3s;
+}
+
+.cabecera .menu a:hover{
+    color: orangered;
+    transform: scale(1.1);
+}
+
+                                                                    /*INICIO*/
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./multimedia/3cafes.jpg') no-repeat center 80%;
+    background-size: cover;
+    padding: 8rem;
+    color: white;
+    border-radius: 1.2rem;
+    max-width: 160rem;
+    margin: 2.5rem auto;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+
+.texto-inicio {
+    text-align: center;
+    max-width: 70rem;
+}
+
+.texto-inicio h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.texto-inicio p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+                                                                    /*PRODUCTOS*/
+
+.productos {
+    flex-wrap: wrap;
+    max-width: 160rem;
+    margin: 4rem auto;
+    padding: 4rem;
+    background: #f9f4ef;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+    gap: 3rem;
+    color: #333;
+}
+
+.productos .listas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+}
+
+.productos ul, .productos ol, .productos dl {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    flex: 1 1 0;
+}
+
+.productos ul:hover, .productos ol:hover, .productos dl:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video video{
+    text-align: center;
+    width: 70%;
+    border-radius: 20%;
+}
+
+                                                                    /*PRECIOS*/
+
+.precios {
+    max-width: 160rem;
+    margin: 4rem auto;
+    padding: 4rem;
+    background-color: #f9f4ef;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.precios table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.6rem;
+}
+
+.precios caption {
+    caption-side: top;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #5a2d0c;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.precios th {
+    background-color: #8b4513;
+    color: whitesmoke;
+    padding: 1.2rem;
+    text-transform: uppercase;
+}
+
+.precios td, .precios th {
+    padding: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+                                                                    /*GALERIA*/
+
+.galeria {
+    padding: 4rem 2rem;
+    background-color: #f9f4ef;
+    max-width: 160rem;
+    margin: 4rem auto;
+    border-radius: 1.2rem;
+}
+
+.galeria h2{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
+    gap: 1.5rem;
+}
+
+.imagenes img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes img:hover {
+    transform: scale(1.1) rotate(1deg);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+                                                                    /*Tutoriales*/
+
+.tutoriales {
+    padding: 4rem 2rem;
+    background: #f9f4ef;
+    color: #3b2f2f;
+    margin: 2.5rem auto;
+    max-width: 160rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+.tutoriales h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem;
+}
+
+.contenido-tutorial {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-tutorial {
+    flex: 1 1 40rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 1rem;
+    text-align: justify;
+    min-width: 30rem;
+}
+
+.video-tutorial {
+
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30rem;
+}
+
+.video-tutorial iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+                                                                    /*Contacto*/
+
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    flex: 1 1 45rem;
+    background-color: #f9f4ef;
+    border-radius: 1.2rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.texto-formulario,
+select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    background-color: #4a3b29;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5f432b;
+}
+
+.mapa {
+    flex: 1 1 45rem;
+    height: 45rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+                                                                    /*Footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b4513;
+    min-height: 5rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    border-radius: 2rem 2rem 0 0;
+}
+
+footer h3{
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+                                                                /*Media Query Tablets*/
+
+@media (max-width: 800px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .cabecera, .inicio, .productos, .precios, .galeria, .tutoriales, .contacto, footer {
+        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cabecera .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .titulo h1 {
+        font-size: 5rem;
+    }
+
+    .titulo img {
+        width: 12rem;
+    }
+
+    .inicio {
+        padding: 4rem 2rem;
+    }
+
+    .productos .listas {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .productos ul, .productos ol, .productos dl {
+        width: 100%;
+    }
+
+    .precios table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .imagenes {
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+        justify-items: center;
+    }
+
+    .imagenes img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenido-tutorial {
+        flex-direction: column;
+    }
+
+    .video video,
+    .video-tutorial iframe {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    form, .mapa {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+                                                                /*Media Query Moviles*/
+
+@media (max-width: 500px) {
+    .cabecera .menu a {
+        font-size: 2rem;
+    }
+
+    .titulo h1 {
+        display: none;
+    }
+
+    .titulo img {
+        width: 4rem;
+    }
+
+    .precios caption {
+        font-size: 2.2rem;
+    }
+
+    .precios th, .precios td {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria h2 {
+        font-size: 3rem;
+    }
+}
